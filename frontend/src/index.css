@@ -1,0 +1,39 @@
+/* Base layer — resets and fonts. Component styling lives in App.css. */
+
+:root {
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    'Segoe UI', system-ui, -apple-system, 'Noto Sans Telugu', 'Nirmala UI',
+    sans-serif;
+  line-height: 1.55;
+  background: #ffffff;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Telugu renders best with Unicode-friendly fonts plus a touch more weight. */
+html[lang='te'] body {
+  font-family:
+    'Noto Sans Telugu', 'Nirmala UI', 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+#root {
+  min-height: 100vh;
+}

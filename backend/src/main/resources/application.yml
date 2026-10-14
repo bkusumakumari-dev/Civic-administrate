@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    # Credentials come from environment variables when set, otherwise these
+    # local development defaults are used. Never commit real production secrets.
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/civicpulse_db}
+    username: ${DB_USERNAME:civicpulse}
+    password: ${DB_PASSWORD:password}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: ${SERVER_PORT:8082}
